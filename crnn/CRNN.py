@@ -2,14 +2,20 @@ from PIL import  Image
 import numpy as np
 import cv2
 import sys
+import os
 
-from .keys import alphabetChinese as alphabet
-#from keys import alphabetChinese as alphabet
+path1=os.path.dirname(__file__)
+path2=os.path.dirname(path1)
+sys.path.append(path1)
+sys.path.append(path2)
+
+#from .keys import alphabetChinese as alphabet
+from keys import alphabetChinese as alphabet
 
 import onnxruntime as rt
 sys.path.append("..")
-from .util import strLabelConverter, resizeNormalize
-#from util import strLabelConverter, resizeNormalize
+#from .util import strLabelConverter, resizeNormalize
+from util import strLabelConverter, resizeNormalize
 
 converter = strLabelConverter(''.join(alphabet))
 

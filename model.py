@@ -1,4 +1,4 @@
-from config import model_path,crnn_model_path,angle_net_path,angle_detect
+from config import model_path,crnn_model_path,angle_net_path,angle_detect,is_rgb,angle_detect_num
 from crnn import CRNNHandle
 from angnet import  AngleNetHandle
 from utils import draw_bbox, crop_rect, sorted_boxes, get_rotate_crop_image
